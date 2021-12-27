@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-    const handleData = (data) => {
-        console.log("receiver:", data);
-    }
+    const [data, setData] = useState("");
+    const handleData = (name) => {
+        console.log("Parents receiver: ", name);
+        setData(name);
+    };
     return (
         <div className="App">
             <h1>Child Receiverd</h1>
             <Child_1 handleData={handleData}/>
+            <Child_2 data={data} />
         </div>
     );
 }
 function Child_1({handleData}){
     const data = "MasaiSchool";
     handleData(data)
-    return <h3>Child Receiverd: {data}</h3>
+    return <h3></h3>;
 
 }
 
-function Child_2(){}
+function Child_2({data}){
+    return <h3>Child Receiverd: {data}</h3>
+}
 
 
 

@@ -1,13 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { Todo } from './components/Todo';
 
+function App() {
+    return (
+        <div className="App">
+            <Todo />
+        </div>
+    );
+}
+
+
+/*
 function App() {
     const [data, setData] = useState("");
     const handleData = (name) => {
         console.log("Parents receiver: ", name);
         setData(name);
     };
+    console.log("rendering")
     return (
         <div className="App">
             <h1>Child Receiverd</h1>
@@ -27,7 +38,7 @@ function Child_2({data}){
     return <h3>Child Receiverd: {data}</h3>
 }
 
-
+*/
 
 /*
 Have a function in parents

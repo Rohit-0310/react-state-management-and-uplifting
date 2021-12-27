@@ -12,10 +12,9 @@ export const Todo = () => {
     };
     return (
         <>
-            <TodoInput 
-            getData={handleClick} />
-                {list.map((e) => (
-                    <TodoItem title={e} />
+            <TodoInput getData={handleClick} />
+                {list.map((e, i) => (
+                    <TodoItem key={i} title={e} />
                 
             ))}
         </>

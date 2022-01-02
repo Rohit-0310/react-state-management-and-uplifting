@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { TodoInput } from "./TodoInput";
 import { TodoItem } from "./TodoItem";
 import { nanoid } from "nanoid"
@@ -27,6 +27,8 @@ export const Todo = () => {
                     <TodoItem key={e.id} {...e} handleToggle={handleToggle} />
                 
             ))}
+            {/* {[Learn React : 0, Learn Vue: 1, Forms: 2, Learn TypScript: 3]} */}
+            {/* {[Learn React : 0, Learn TypScript: 3]} */}
         </>
     );
 }
